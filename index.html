@@ -424,246 +424,590 @@
       </p>
     </div>
 
+    <!-- Filters (UI only for now) -->
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
+      <a href="#products"
+         class="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm hover:border-blue-500/50 hover:text-slate-900">
+        All
+      </a>
+
+      <a href="#products"
+         class="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm hover:border-blue-500/50 hover:text-slate-900">
+        Films
+        <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">6</span>
+      </a>
+
+      <a href="#products"
+         class="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm hover:border-blue-500/50 hover:text-slate-900">
+        Polymers
+        <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">2</span>
+      </a>
+
+      <a href="#products"
+         class="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm hover:border-blue-500/50 hover:text-slate-900">
+        Adhesives
+        <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">2</span>
+      </a>
+
+      <a href="#products"
+         class="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm hover:border-blue-500/50 hover:text-slate-900">
+        Industrial
+        <span class="ml-2 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">1</span>
+      </a>
+    </div>
+
     <!-- Grid -->
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+
 
       <!-- CARD TEMPLATE (use same style for all) -->
       <!-- Adhesive Tape -->
       <a href="#contact"
-         class="ac-product-card group rounded-2xl bg-white p-5
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
                 border-2 border-slate-200 hover:border-blue-500/70
                 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/adhesive-tape.jpg" alt="Adhesive Tape"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon (use only on 2–3 items) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Best Seller
+          </span>
         </div>
 
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">Adhesive Tape</h3>
           <p class="mt-1 text-sm text-slate-600">Strong bonding for industrial and packaging use.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">High adhesion</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Industrial</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Bulk supply</span>
+          </div>
         </div>
 
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Industrial grade
+            Ready stock / On order
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- Doctor Blade -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/doctor-blade.jpg" alt="Doctor Blade"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon (optional) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            High Precision
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">Doctor Blade</h3>
           <p class="mt-1 text-sm text-slate-600">Precision blades for coating and printing.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Coating</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Printing</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Clean finish</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            High precision
+            OEM / Industrial use
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- BOPP Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/bopp-film.jpg" alt="BOPP Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon (optional) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Premium Finish
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">BOPP Film</h3>
           <p class="mt-1 text-sm text-slate-600">Clear, strong film for premium packaging.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Gloss / Clear</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Lamination</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Brand-ready</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Premium finish
+            Consistent roll quality
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- PET Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/pet-film.jpg" alt="PET Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon (optional) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Durable
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">PET Film</h3>
           <p class="mt-1 text-sm text-slate-600">Durable film for protection and performance.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">High strength</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Heat stable</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Protective</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Durable
+            Performance grade
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- MPET Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm flex flex-col">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/mpet-film.jpg" alt="MPET Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/12 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon (optional) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            High Barrier
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">MPET Film</h3>
           <p class="mt-1 text-sm text-slate-600">Metallized barrier film for advanced packaging.</p>
+
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Barrier grade</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Moisture protection</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Premium packaging</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-between mt-auto">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
             Barrier grade
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- CPP Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/cpp-film.jpg" alt="CPP Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- (optional ribbon) remove if you want fewer ribbons -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Smooth Finish
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">CPP Film</h3>
           <p class="mt-1 text-sm text-slate-600">Smooth finish film for flexible packaging.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Flexible packaging</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Heat seal</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Clean roll</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Smooth finish
+            Consistent finish
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- Matte BOPP Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/matte-bopp-film.jpg" alt="Matte BOPP Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/12 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- ribbon -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Premium Finish
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">Matte BOPP Film</h3>
           <p class="mt-1 text-sm text-slate-600">Premium matte finish for high-end branding.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Matte premium</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Luxury look</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Brand-ready</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Matte premium
+            High-end packaging
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- Adhesive Hardener -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/adhesive-hardener.jpg" alt="Adhesive Hardener"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- (optional ribbon) remove if you want fewer ribbons -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Strong Cure
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">Adhesive Hardener</h3>
           <p class="mt-1 text-sm text-slate-600">Improves adhesive strength and curing.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Better bonding</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Faster curing</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Industrial use</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Strong cure
+            For adhesive systems
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- LDPE -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/ldpe.jpg" alt="LDPE"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- (optional ribbon) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Flexible
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">LDPE</h3>
           <p class="mt-1 text-sm text-slate-600">Flexible polymer for packaging applications.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Soft & flexible</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Packaging grade</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Bulk supply</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Flexible
+            Consistent quality
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- HDPE -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/hdpe.jpg" alt="HDPE"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- (optional ribbon) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Durable
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">HDPE</h3>
           <p class="mt-1 text-sm text-slate-600">High-density polymer for durable packaging.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">High strength</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Durable</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Industrial grade</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Durable
+            Reliable performance
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
 
+
       <!-- PP Film -->
-      <a href="#contact" class="ac-product-card group rounded-2xl bg-white p-5 border-2 border-slate-200 hover:border-blue-500/70 shadow-sm">
-        <div class="rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
+      <a href="#contact"
+        class="ac-product-card reveal-card group relative rounded-2xl bg-white p-5
+                border-2 border-slate-200 hover:border-blue-500/70
+                shadow-sm">
+
+        <div class="relative rounded-xl bg-slate-50 border border-slate-200 overflow-hidden">
           <div class="aspect-[4/3]">
             <img src="assets/images/products/pp-film.jpg" alt="PP Film"
-                 class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.04]">
+                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]">
           </div>
+
+          <!-- soft overlay on hover -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent
+                      opacity-0 transition duration-300 group-hover:opacity-100"></div>
+
+          <!-- (optional ribbon) -->
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold text-slate-900
+                      border border-slate-200 shadow-sm">
+            Versatile
+          </span>
         </div>
+
         <div class="mt-4">
           <h3 class="text-lg font-bold text-slate-900">PP Film</h3>
           <p class="mt-1 text-sm text-slate-600">Versatile film for packaging and lamination.</p>
+
+          <!-- mini specs -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Lamination</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Packaging</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-700">Multi-purpose</span>
+          </div>
         </div>
-        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-          <span class="inline-flex items-center gap-2 text-slate-600">
+
+        <div class="mt-5 pt-4 border-t border-slate-200 flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 text-xs text-slate-600">
             <span class="h-2 w-2 rounded-full bg-primary/80"></span>
-            Versatile
+            Consistent roll finish
           </span>
-          <span class="font-semibold text-primary">Request Quote →</span>
+
+          <span class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary
+                      border border-primary/20 transition group-hover:bg-primary/15">
+            Get Quote
+            <span class="transition group-hover:translate-x-0.5">→</span>
+          </span>
         </div>
       </a>
-
     </div>
   </div>
 </section>
@@ -1049,6 +1393,25 @@
 
   statEls.forEach((el) => observer.observe(el));
 </script>
+
+<script>
+  const revealCards = document.querySelectorAll(".reveal-card");
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+
+  revealCards.forEach((card, i) => {
+    card.style.transitionDelay = (i % 6) * 80 + "ms";
+    io.observe(card);
+  });
+</script>
+
+
 <style>
   /* Executive-level feature card interaction */
   .ac-feature-card {
@@ -1067,11 +1430,7 @@
     opacity: 0;
     transform: translateX(-16px);
     transition: opacity .35s ease, transform .35s ease;
-    background: linear-gradient(
-      90deg,
-      rgba(37, 99, 235, 0.14),
-      rgba(37, 99, 235, 0)
-    );
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.14), rgba(37, 99, 235, 0));
     pointer-events: none;
   }
 
@@ -1085,30 +1444,73 @@
     transform: translateX(0);
   }
 
-  .ac-product-card{
+  /* Product cards */
+  .ac-product-card {
     position: relative;
     overflow: hidden;
     transform: translateY(0);
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    will-change: transform;
   }
-  .ac-product-card::before{
-    content:"";
-    position:absolute;
-    left:0; right:0; top:0;
-    height:4px;
-    background: linear-gradient(90deg, rgba(111,174,45,.9), rgba(37,99,235,.8));
-    opacity:.0;
+
+  .ac-product-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(111, 174, 45, .9), rgba(37, 99, 235, .8));
+    opacity: 0;
     transition: opacity .25s ease;
   }
-  .ac-product-card:hover{
+
+  .ac-product-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(15,23,42,.10);
-    border-color: rgba(37,99,235,.55);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, .10);
+    border-color: rgba(37, 99, 235, .55);
   }
-  .ac-product-card:hover::before{ opacity:1; }
+
+  .ac-product-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Clamp text to keep cards uniform */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Scroll reveal animation */
+  .reveal-card {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .55s ease, transform .55s ease;
+    will-change: transform, opacity;
+  }
+
+  .reveal-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-card {
+      transition: none;
+      transform: none;
+      opacity: 1;
+    }
+  }
 </style>
-
-
-
 </body>
 </html>
